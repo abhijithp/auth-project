@@ -1,0 +1,10 @@
+<h1>Home</h1>
+<% if (user) { %>
+	  <p>Welcome, <%= user.email %></p>
+	  <form action="/logout" method="post">
+	    <button type="submit">Logout</button>
+	  </form>
+	<% } else { %>
+	  <p>You are not logged in.</p>
+	  <a href="/login">Login</a>
+	<% } %>

@@ -1,0 +1,19 @@
+<h1>Login</h1>
+<% if (messages.length > 0) { %>
+  <% messages.forEach(function(message) { %>
+    <div class="alert alert-danger"><%= message %></div>
+  <% }) %>
+<% } %>
+<form action="/login" method="post">
+  <div>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+  </div>
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>
